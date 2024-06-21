@@ -1,0 +1,37 @@
+﻿<Window x:Class="Translate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Translate"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="400" MinWidth="500">
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="55"/>
+            <ColumnDefinition Width="135"/>
+            <ColumnDefinition Width="65"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBox x:Name="tb3" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" TextWrapping="Wrap" Text="" FontFamily="Comic Sans MS" PreviewTextInput="NumberValidationTextBox"/>
+        <TextBox x:Name="tb1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" TextWrapping="Wrap" Text="" FontFamily="Comic Sans MS" FontSize="36" FontWeight="Bold" Style="{StaticResource placeHolder}" Tag="Enter проверять, L.Ctrl чистка, R.Shift перевод"/>
+        <TextBox x:Name="tb2" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" TextWrapping="Wrap" Text="" FontFamily="Comic Sans MS" FontSize="36" FontWeight="Bold" KeyDown="TextBox_KeyDown"/>
+        <TextBox x:Name="tb4" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" TextWrapping="Wrap" Text="" FontFamily="Comic Sans MS"/>
+        
+        <Button x:Name="bt1" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" FontSize="20" FontFamily="Comic Sans MS" Content="Start" Background="#FF87DFEF" Click="bt1_Click"/>
+        <Button x:Name="bt2" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" FontSize="14" FontFamily="Comic Sans MS" Content="Clear" Background="#FFFF7588" Click="Button_Click"/>
+
+        <DockPanel Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" LastChildFill="False">
+            <RadioButton x:Name="rb1" Margin="5" Content="Rus -> Eng" DockPanel.Dock="Left" IsChecked="True"/>
+            <RadioButton x:Name="rb2" Margin="5" Content="Eng -> Rus" DockPanel.Dock="Right" />
+        </DockPanel>
+    </Grid>
+</Window>
